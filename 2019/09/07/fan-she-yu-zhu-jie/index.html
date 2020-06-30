@@ -842,18 +842,16 @@ System<span class="token punctuation">.</span>out<span class="token punctuation"
 <li><p>之后使用Object invoke(Object obj, Object[] args)进行调用，并向方法中传递要设置的obj对象的参数信息。</p>
 <img src="/2019/09/07/fan-she-yu-zhu-jie/image-20200630233852371.png" class="">
 
-<pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">//通过反射获取一个方法(反射操作方法)</span>
-Method setName <span class="token operator">=</span> c1<span class="token punctuation">.</span><span class="token function">getDeclaredMethod</span><span class="token punctuation">(</span><span class="token string">"setName"</span><span class="token punctuation">,</span> String<span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-setName<span class="token punctuation">.</span><span class="token function">invoke</span><span class="token punctuation">(</span>person<span class="token punctuation">,</span><span class="token string">"Code"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>person<span class="token punctuation">.</span><span class="token function">getName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-</code></pre>
 </li>
 </ul>
 </li>
 </ul>
-<pre><code>```</code></pre><ul>
+<pre class=" language-java"><code class="language-java">    <span class="token comment" spellcheck="true">//通过反射获取一个方法(反射操作方法)</span>
+    Method setName <span class="token operator">=</span> c1<span class="token punctuation">.</span><span class="token function">getDeclaredMethod</span><span class="token punctuation">(</span><span class="token string">"setName"</span><span class="token punctuation">,</span> String<span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    setName<span class="token punctuation">.</span><span class="token function">invoke</span><span class="token punctuation">(</span>person<span class="token punctuation">,</span><span class="token string">"Code"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>person<span class="token punctuation">.</span><span class="token function">getName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<ul>
 <li><p>Object 对应原方法的返回值，若原方法无返回值，此时返回null</p>
 </li>
 <li><p>若原方法若为静态方法，此时形参Object obj可为null</p>
@@ -861,8 +859,7 @@ System<span class="token punctuation">.</span>out<span class="token punctuation"
 <li><p>若原方法形参列表为空，则Object[] args为null</p>
 </li>
 <li><p><strong>若原方法声明为private,则需要在调用此invoke()方法前，显式调用方法对象的</strong><br><strong>setAccessible(true)方法，将可访问private的方法。</strong></p>
-</li>
-<li><pre class=" language-java"><code class="language-java">Field name <span class="token operator">=</span> c1<span class="token punctuation">.</span><span class="token function">getDeclaredField</span><span class="token punctuation">(</span><span class="token string">"name"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre class=" language-java"><code class="language-java">Field name <span class="token operator">=</span> c1<span class="token punctuation">.</span><span class="token function">getDeclaredField</span><span class="token punctuation">(</span><span class="token string">"name"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token comment" spellcheck="true">//name作为private属性，正常不能直接访问，可通过setAccessible关闭检测</span>
 name<span class="token punctuation">.</span><span class="token function">setAccessible</span><span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 name<span class="token punctuation">.</span><span class="token function">set</span><span class="token punctuation">(</span>person<span class="token punctuation">,</span><span class="token string">"code1"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
