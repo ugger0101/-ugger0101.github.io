@@ -459,7 +459,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    4.4k
+                    4.5k
                 </div>
                 
 
@@ -481,10 +481,10 @@
 <li>系统结构由数据在各处理之间的<strong>有序移动</strong>决定</li>
 <li>在纯数据流系统中，处理之间<strong>除了数据交换没有任何其他的交互</strong></li>
 </ul>
-<h4 id="基本构件：数据处理"><a href="#基本构件：数据处理" class="headerlink" title="基本构件：数据处理"></a><strong>基本构件：数据处理</strong></h4><p>​    <strong>构件接口：</strong>输入端口和输出端口</p>
+<h4 id="基本构件：数据处理"><a href="#基本构件：数据处理" class="headerlink" title="基本构件：数据处理"></a><strong>基本构件：<u>数据处理</u></strong></h4><p>​    <strong>构件接口：</strong>输入端口和输出端口</p>
 <p>​    <strong>计算模型：</strong>从输入端口读数，经过计算/处理，然后写到输出端口)到另一个处理的输入端口</p>
 <p><img src="https://gitee.com/ugger01/blog-image/raw/master/img/20201226200025.png" alt="image-20201226200024267"></p>
-<h4 id="连接件：数据流"><a href="#连接件：数据流" class="headerlink" title="连接件：数据流"></a>连接件：数据流</h4><p>​    单吐、 通常是异步、有缓冲</p>
+<h4 id="连接件：数据流"><a href="#连接件：数据流" class="headerlink" title="连接件：数据流"></a>连接件：<u>数据流</u></h4><p>​    单吐、 通常是异步、有缓冲</p>
 <p>​    <strong>接口角色：</strong>reader和writer</p>
 <p><strong>计算模型:</strong> 把数据从一个处理的输出端口传送到另一个处理的输入端口</p>
 <p><img src="https://gitee.com/ugger01/blog-image/raw/master/img/20201226200224.png" alt="image-20201226200220070"></p>
@@ -492,26 +492,25 @@
 <p><img src="https://gitee.com/ugger01/blog-image/raw/master/img/20201226200345.png" alt="image-20201226200343845"></p>
 <h4 id="批处理体系结构风格"><a href="#批处理体系结构风格" class="headerlink" title="批处理体系结构风格"></a>批处理体系结构风格</h4><h5 id="直观结构"><a href="#直观结构" class="headerlink" title="直观结构"></a>直观结构</h5><p><img src="https://gitee.com/ugger01/blog-image/raw/master/img/20201226200438.png" alt="image-20201226200437648"></p>
 <p><img src="https://gitee.com/ugger01/blog-image/raw/master/img/20201226200511.png" alt="image-20201226200510960"></p>
-<h5 id="定义："><a href="#定义：" class="headerlink" title="定义："></a>定义：</h5><p><strong>基本构件</strong>：独立的应用程序</p>
-<p><strong>连接件</strong>：某种类型的媒质（磁带）</p>
+<h5 id="定义："><a href="#定义：" class="headerlink" title="定义："></a>定义：</h5><p><strong>基本构件</strong>：<u>独立的应用程序</u></p>
+<p><strong>连接件</strong>：<u>某种类型的媒质</u>（磁带）</p>
 <p>连接件定义相应的数据流图，表达拓扑结构</p>
 <p>每个处理步骤是一个独立的程序</p>
 <p>每一步必项在前一步结束后才能开始</p>
-<p>数据必项是完整的，以<strong>整体的方式传递</strong></p>
+<p><u>数据必项是完整的，以<strong>整体的方式传递</strong></u></p>
 <h5 id="应用实例："><a href="#应用实例：" class="headerlink" title="应用实例："></a>应用实例：</h5><p><img src="https://gitee.com/ugger01/blog-image/raw/master/img/20201226200903.png" alt="image-20201226200901749"></p>
 <h4 id="管道-过滤器体系结构风格"><a href="#管道-过滤器体系结构风格" class="headerlink" title="管道-过滤器体系结构风格"></a>管道-过滤器体系结构风格</h4><h5 id="直观结构："><a href="#直观结构：" class="headerlink" title="直观结构："></a>直观结构：</h5><p><img src="https://gitee.com/ugger01/blog-image/raw/master/img/20201226200957.png" alt="image-20201226200956362"></p>
 <p><img src="https://gitee.com/ugger01/blog-image/raw/master/img/20201226201010.png" alt="image-20201226201009847"></p>
-<h5 id="定义：-1"><a href="#定义：-1" class="headerlink" title="定义："></a>定义：</h5><p><strong>场境：</strong>数据源源不断的产生，系统需要对这些数据进行若干处理(分析、计算、转换等)</p>
-<p>==递增的读取和消费数据流==</p>
-<p>​        数据到来时便被处理，不是收集然后处理，即在输入被完全消费        之前，输出便产生了</p>
-<h5 id="解决方案："><a href="#解决方案：" class="headerlink" title="解决方案："></a>解决方案：</h5><p>每个处理步骤(过滤器)都有一组输入和输出，过滤器从管道中读叏输入的数据流，经过内部处理，然后产生输出数据流幵写入管道中。</p>
-<h5 id="构件："><a href="#构件：" class="headerlink" title="构件："></a>构件：</h5><p><strong>构件：</strong>过滤器，处理数据流</p>
+<h5 id="定义：-1"><a href="#定义：-1" class="headerlink" title="定义："></a>定义：</h5><p><strong>场景：<u>（数据产生-&gt;系统处理）</u></strong>数据源源不断的产生，系统需要对这些数据进行若干处理(分析、计算、转换等)</p>
+<p><strong>递增的读取和消费数据流,数据到来时便被处理</strong>，不是收集然后处理，即在输入被完全消费之前，输出便产生了</p>
+<h5 id="原理："><a href="#原理：" class="headerlink" title="原理："></a>原理：</h5><p><u>每个处理步骤(过滤器)都有一组输入和输出，过滤器从管道中读取输入的数据流，经过内部处理，然后产生输出数据流并写入管道中</u>。</p>
+<h5 id="构件"><a href="#构件" class="headerlink" title="构件"></a>构件</h5><p><strong>过滤器</strong>（独立的实体），处理数据流</p>
 <ul>
 <li>一个过滤器封装一个处理步骤</li>
 <li>数据源点和数据终止点可以看作是特殊的过滤器</li>
 </ul>
-<h5 id="连接件："><a href="#连接件：" class="headerlink" title="连接件："></a>连接件：</h5><p><strong>连接件：</strong>管道，连接一个源和一个目的过滤器</p>
-<h5 id="过滤器："><a href="#过滤器：" class="headerlink" title="过滤器："></a>过滤器：</h5><p><strong>目标：</strong>将源数据变换成目标数据</p>
+<h5 id="连接件"><a href="#连接件" class="headerlink" title="连接件"></a>连接件</h5><p><strong>管道</strong>，连接一个源和一个目的过滤器</p>
+<h5 id="过滤器"><a href="#过滤器" class="headerlink" title="过滤器"></a>过滤器</h5><p><strong>目标：</strong>将源数据变换成目标数据</p>
 <p><u>过滤器对数据流的五种变换类型</u></p>
 <p><img src="https://gitee.com/ugger01/blog-image/raw/master/img/20201226201428.png" alt="image-20201226201427421"></p>
 <p><strong>语义约束：是独立的实体</strong></p>
@@ -546,7 +545,7 @@
 <li><strong>高内聚</strong>：过滤器是执行特定功能的自包含处理服务，具有较强的内聚性</li>
 <li><strong>低耦合</strong>: 过滤器间仅通过管道通信</li>
 <li><strong>可重用</strong>: 支持过滤器的重用</li>
-<li>可简单地实现为开发或顺序系统</li>
+<li>可简单地实现为并发或顺序系统</li>
 <li><strong>可扩展性</strong>：容易添加新的过滤器</li>
 <li>灵活性：<ul>
 <li>过滤器功能可重新定义</li>
@@ -575,14 +574,14 @@
 <p>例子：注册表 剪贴板</p>
 <h4 id="仓库体系结构风格"><a href="#仓库体系结构风格" class="headerlink" title="仓库体系结构风格"></a>仓库体系结构风格</h4><p>仓库是<strong>存储和维护</strong>数据的中心场所</p>
 <hr>
-<p>两种不同的部分组成：</p>
+<p>两种不同的部分组成（<strong>构件</strong>）：</p>
 <ul>
-<li>中心数据结构，表示当前数据的状态</li>
-<li>一组对中心数据进行操作的独立构件</li>
+<li><strong>中心数据结构，表示当前数据的状态</strong></li>
+<li><strong>一组对中心数据进行操作的独立构件</strong></li>
 </ul>
-<h5 id="连接件"><a href="#连接件" class="headerlink" title="连接件"></a>连接件</h5><p>连接件：仓库与独立构件之间的交互</p>
-<h5 id="存在两种交互机制"><a href="#存在两种交互机制" class="headerlink" title="存在两种交互机制"></a>存在两种交互机制</h5><p><strong>数据库方式：</strong>输入流中的事务类型触发需要执行的过程（被动驱动）</p>
-<p><strong>黑板结构</strong>：中心数据结构的当前状态触发并选择需要执行的过程（主动驱动）</p>
+<h5 id="连接件-1"><a href="#连接件-1" class="headerlink" title="连接件"></a>连接件</h5><p><u>仓库与独立构件之间的交互</u></p>
+<h5 id="存在两种交互机制"><a href="#存在两种交互机制" class="headerlink" title="存在两种交互机制"></a>存在两种交互机制</h5><p><strong><u>数据库方式</u>：</strong>输入流中的事务类型触发需要执行的过程（<strong>被动驱动</strong>）</p>
+<p><strong><u>黑板结构</u></strong>：中心数据结构的当前状态触发并选择需要执行的过程（<strong>主动驱动</strong>）</p>
 <h5 id="适用场景："><a href="#适用场景：" class="headerlink" title="适用场景："></a>适用场景：</h5><p>适用于中心问题是建立、扩充和维护复杂的中心信息体的应用程序</p>
 <p>应用场景：数据处理，软件开发环境（典型应用：数据库）</p>
 <h5 id="应用实例"><a href="#应用实例" class="headerlink" title="应用实例"></a>应用实例</h5><h6 id="传统编译器结构："><a href="#传统编译器结构：" class="headerlink" title="传统编译器结构："></a>传统编译器结构：</h6><p>批处理/管道-过滤器</p>
@@ -592,13 +591,13 @@
 <p><img src="https://gitee.com/ugger01/blog-image/raw/master/img/20201227094209.png" alt="image-20201227094208445"></p>
 <h6 id="现代的规范编译器结构"><a href="#现代的规范编译器结构" class="headerlink" title="现代的规范编译器结构"></a>现代的规范编译器结构</h6><p>带符号表与语法树 (parse tree)的编译器。</p>
 <p><img src="https://gitee.com/ugger01/blog-image/raw/master/img/20201227094353.png" alt="image-20201227094350869"></p>
-<h4 id="黑板体系结构"><a href="#黑板体系结构" class="headerlink" title="黑板体系结构"></a>黑板体系结构</h4><h5 id="概述："><a href="#概述：" class="headerlink" title="概述："></a>概述：</h5><p><img src="https://gitee.com/ugger01/blog-image/raw/master/img/20201227094500.png" alt="image-20201227094459973"></p>
-<p><img src="https://gitee.com/ugger01/blog-image/raw/master/img/20201227094524.png" alt="image-20201227094523970"></p>
+<h4 id="黑板体系结构（保存求解状态）"><a href="#黑板体系结构（保存求解状态）" class="headerlink" title="黑板体系结构（保存求解状态）"></a>黑板体系结构（保存求解状态）</h4><h5 id="概述："><a href="#概述：" class="headerlink" title="概述："></a>概述：</h5><p><img src="https://gitee.com/ugger01/blog-image/raw/master/img/20201227094500.png" alt="image-20201227094459973"></p>
+<p><strong><u>下图为重点了解</u></strong><img src="https://gitee.com/ugger01/blog-image/raw/master/img/20201227094524.png" alt="image-20201227094523970"></p>
 <p><img src="https://gitee.com/ugger01/blog-image/raw/master/img/20201227094904.png" alt="image-20201227094903556"></p>
 <h5 id="定义：-2"><a href="#定义：-2" class="headerlink" title="定义："></a>定义：</h5><p>黑板结构：中心数据结构的当前状态触发并选择需要执行的过程</p>
 <h5 id="黑板系统的基本结构"><a href="#黑板系统的基本结构" class="headerlink" title="黑板系统的基本结构"></a>黑板系统的基本结构</h5><p><img src="https://gitee.com/ugger01/blog-image/raw/master/img/20201227094641.png" alt="image-20201227094640189"></p>
 <p><strong>全局数据库</strong>，用来存储数据、传递信息，包含解域的全部状态</p>
-<p>解决问题过程中的<strong>状态数据</strong>，以<strong>层次</strong>形式组细起来</p>
+<p>解决问题过程中的<strong>状态数据</strong>，以<strong>层次</strong>形式组织起来</p>
 <p><strong>知识源对黑板进行修改</strong>，逐渐找到问题的解</p>
 <p>各知识源之间的通讯和交互只通过黑板进行</p>
 <h6 id="知识源"><a href="#知识源" class="headerlink" title="知识源"></a>知识源</h6><p>知识源是描述某个独立领域问题的知识及其处理方法的知识库 ，其<strong>分别存放</strong>且相亏<strong>独立</strong>的，通过<strong>黑板</strong>进行通讯，合作求出问题的解，通常知识源具有“<strong>条件-动作</strong>”的形式。当条件满足时，知识源被触发，其动作部分增加或修改黑板上的内容。</p>
@@ -631,7 +630,7 @@
 <p>许多编程语言天然地支持层层嵌套过程调用并可用层次化对它进行管理和调用，使得每一模块具有命名空间，这种执行环境在单一命名空间提供单线程控制，拥有自己的变量和方法</p>
 <h5 id="系统模型："><a href="#系统模型：" class="headerlink" title="系统模型："></a><strong>系统模型：</strong></h5><p>层次化调用，子系统通过模块化定义</p>
 <h5 id="组件：-1"><a href="#组件：-1" class="headerlink" title="组件："></a>组件：</h5><p>数据和可访问功能可见</p>
-<h5 id="还接件："><a href="#还接件：" class="headerlink" title="还接件："></a>还接件：</h5><p>通过过程或函数调用，传递参数捕获返回值</p>
+<h5 id="连接件："><a href="#连接件：" class="headerlink" title="连接件："></a>连接件：</h5><p>通过过程或函数调用，传递参数捕获返回值</p>
 <h5 id="控制结构："><a href="#控制结构：" class="headerlink" title="控制结构："></a>控制结构：</h5><p>单线程</p>
 <h4 id="数据抽象-面向对象"><a href="#数据抽象-面向对象" class="headerlink" title="数据抽象/面向对象"></a>数据抽象/面向对象</h4><h5 id="系统模型：-1"><a href="#系统模型：-1" class="headerlink" title="系统模型："></a>系统模型：</h5><p>局部化状态的维持</p>
 <h5 id="组件：-2"><a href="#组件：-2" class="headerlink" title="组件："></a>组件：</h5><p>不同角色比如servers、对象、抽象数据类型</p>
@@ -717,7 +716,7 @@
 <li>各个构件之间彼此之间无连接关系，各自独立存在，通过对事件的<strong>发布和注册</strong>实现关联。</li>
 </ul>
 <h4 id="基本结构与工作原理"><a href="#基本结构与工作原理" class="headerlink" title="基本结构与工作原理"></a>基本结构与工作原理</h4><p><img src="https://gitee.com/ugger01/blog-image/raw/master/img/20201227111744.png" alt="image-20201227111743731"></p>
-<ul>
+<h4 id="基本结构"><a href="#基本结构" class="headerlink" title="基本结构"></a>基本结构</h4><ul>
 <li>事件源</li>
 <li>事件处理器</li>
 <li>事件管理器</li>
@@ -775,7 +774,7 @@
 <li>发现因体系结构设计存在的风险而<strong>非详尽精准分析</strong></li>
 <li>发现趋势：正确的体系结构设计和一些系统本身需要的质量属性之间有没相互矛盾的</li>
 </ul>
-<h5 id="好处"><a href="#好处" class="headerlink" title="好处"></a>好处</h5><ul>
+<h5 id="好处"><a href="#好处" class="headerlink" title="好处"></a><u>好处</u></h5><ul>
 <li>识别风险</li>
 <li>阐明质量属性需求</li>
 <li>提升体系结构设计及设计文档化</li>
@@ -889,10 +888,10 @@
 <h5 id="风险决策"><a href="#风险决策" class="headerlink" title="风险决策"></a>风险决策</h5><p>风险是一个潜在的有问题的架构决策</p>
 <h5 id="无风险决策"><a href="#无风险决策" class="headerlink" title="无风险决策"></a>无风险决策</h5><p>需求被满足了 好的架构设计</p>
 <h5 id="阶段"><a href="#阶段" class="headerlink" title="阶段"></a>阶段</h5><p><img src="https://gitee.com/ugger01/blog-image/raw/master/img/20201227152403.png" alt="image-20201227152401679"></p>
-<h5 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h5><ul>
+<h5 id="小结"><a href="#小结" class="headerlink" title="小结"></a><u>小结</u></h5><ul>
 <li>ATAM关注多质量属性</li>
 <li>发现体系结构结果的有效策略</li>
-<li>非详尽精准分析</li>
+<li><strong>非详尽精准分析</strong></li>
 </ul>
 
             </div>
