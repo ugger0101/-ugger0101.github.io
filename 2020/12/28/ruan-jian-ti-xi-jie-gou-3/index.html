@@ -472,20 +472,20 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <h1 id="软件体系结构（3）"><a href="#软件体系结构（3）" class="headerlink" title="软件体系结构（3）"></a>软件体系结构（3）</h1><h2 id="质量属性"><a href="#质量属性" class="headerlink" title="质量属性"></a>质量属性</h2><ul>
-<li>属于非功能性需求，并不被功能所决定<ul>
+<li><strong><u>属于非功能性需求，并不被功能所决定</u></strong><ul>
 <li>实现功能特性必项给构成系统中的各个部分（模块） 赋予正确的<strong>职责</strong>、正确的<strong>资源</strong>和正确的<strong>调度</strong>顺序</li>
 <li><strong>先实现功能，再谈质量属性</strong>（与架构选型有关）</li>
 </ul>
 </li>
-<li>不同的软件项目，关注不同的质量属性<ul>
+<li><strong><u>不同的软件项目，关注不同的质量属性</u></strong><ul>
 <li>影响体系结构风格的选择</li>
 </ul>
 </li>
-<li>质量属性之间可能互相抑制<ul>
+<li><strong><u>质量属性之间可能互相抑制</u></strong><ul>
 <li>优先保证高优先级的质量属性</li>
 </ul>
 </li>
-<li>影响有时是正面的，有时是负面的，比如<ul>
+<li><strong><u>影响有时是正面的，有时是负面</u></strong>的，比如<ul>
 <li>组件粒度大会提高性能，但会降低可维护性</li>
 </ul>
 </li>
@@ -567,7 +567,7 @@
 </li>
 </ul>
 <p><img src="https://gitee.com/ugger01/blog-image/raw/master/img/20201227160405.png" alt="image-20201227160404124"></p>
-<h6 id="故障检测"><a href="#故障检测" class="headerlink" title="故障检测"></a>故障检测</h6><ul>
+<h6 id="故障检测"><a href="#故障检测" class="headerlink" title="故障检测"></a><strong><u>故障检测</u></strong></h6><ul>
 <li>Ping/echo<ul>
 <li>监控组件<strong>不定期</strong>吐被监控组件发出ping消息，并根据收到的echo消息（是否收到、延时）做出响应</li>
 </ul>
@@ -693,7 +693,7 @@
 <li>在软件系统的<strong>生命周期</strong>中对其进行修改是客观存在的事实。</li>
 <li>可修改的系统更容易演化</li>
 <li>可修改性只考虑系统可能发生的变化，不需要考虑不太可能发生的发化</li>
-<li>可修改性主要考虑<strong>变化的成本</strong>。</li>
+<li><u>可修改性主要考虑<strong>变化的成本</strong>。</u></li>
 <li>可修改性用来<strong>度量</strong>修改应用程序以满足新的功能性/非功能性需求的<strong>容易程度</strong>。</li>
 <li>影响很难量化</li>
 <li>评估可修改性<ul>
@@ -758,58 +758,58 @@
 </ul>
 <p><img src="https://gitee.com/ugger01/blog-image/raw/master/img/20201227163352.png" alt="image-20201227163350835"></p>
 <h6 id="限制修改范围"><a href="#限制修改范围" class="headerlink" title="限制修改范围"></a>限制修改范围</h6><ul>
-<li>模块高内聚、低耦合<ul>
+<li><strong><u>模块高内聚、低耦合</u></strong><ul>
 <li>尽量把对程序的修改控制在一个模块内</li>
 <li>可以借助框架、中间件</li>
 </ul>
 </li>
-<li>考虑到可能会发生的修改<ul>
+<li><strong><u>考虑到可能会发生的修改</u></strong><ul>
 <li>有助于评估模块间责任的划分</li>
 <li>让一个点的修改只影响一个模块</li>
 <li>避免完全无关的多个修改会影响同一个模块</li>
 </ul>
 </li>
-<li>让模块通用<ul>
+<li><strong><u>让模块通用</u></strong><ul>
 <li>”解释器“风格思路</li>
 </ul>
 </li>
-<li>隐藏信息<ul>
+<li><strong><u>隐藏信息</u></strong><ul>
 <li>面向对象机制中的可访问性</li>
 </ul>
 </li>
-<li>维持接口不变<ul>
+<li><strong><u>维持接口不变</u></strong><ul>
 <li>在接口不变的情况下，接口连接的双方可以独立变化</li>
 </ul>
 </li>
-<li>限制通信路径（将多对多转换成1对多访问）<ul>
+<li><strong><u>限制通信路径</u></strong>（将多对多转换成1对多访问）<ul>
 <li>设计模式中的Facade模式</li>
 </ul>
 </li>
-<li>使用中介<ul>
+<li><strong><u>使用中介</u></strong><ul>
 <li><strong>数据中介：共享数据的风格</strong></li>
 <li>服务中介:设计模式中的bridge，factory method等模式</li>
 </ul>
 </li>
-<li>命名服务器<ul>
+<li><strong><u>命名服务器</u></strong><ul>
 <li>查询所需资源/对象的位置，解决位置依赖</li>
 </ul>
 </li>
-<li>按需创建实例<ul>
+<li><strong><u>按需创建实例</u></strong><ul>
 <li>借助设计模式中的创建型模式</li>
 </ul>
 </li>
 </ul>
 <h6 id="延迟绑定时间"><a href="#延迟绑定时间" class="headerlink" title="延迟绑定时间"></a>延迟绑定时间</h6><ul>
-<li>配置文件<ul>
+<li><strong><u>配置文件</u></strong><ul>
 <li>修改配置文件，而不用修改代码</li>
 </ul>
 </li>
-<li>发布-订阅模式<ul>
+<li><strong><u>发布-订阅模式</u></strong><ul>
 <li>软件体系风格部分已有介绍（事件系统）</li>
 <li>设计模式中的”观察者模式“</li>
 </ul>
 </li>
-<li>多态<ul>
+<li><strong><u>多态</u></strong><ul>
 <li>用不同的子类，实现不同的功能</li>
 </ul>
 </li>
@@ -992,49 +992,49 @@
 </ul>
 <p><img src="https://gitee.com/ugger01/blog-image/raw/master/img/20201227170946.png" alt="image-20201227170944970"></p>
 <h6 id="资源的需求"><a href="#资源的需求" class="headerlink" title="资源的需求"></a>资源的需求</h6><ul>
-<li>在要处理的数据量不变的情况下，提高计算效率<ul>
+<li><strong><u>在要处理的数据量不变的情况下，提高计算效率</u></strong><ul>
 <li>使用更高效率的算法</li>
 <li>减少处理事件时对资源的占用</li>
 </ul>
 </li>
-<li>减少要处理的数据总量<ul>
+<li><strong><u>减少要处理的数据总量</u></strong><ul>
 <li>控制事件到来的速率</li>
 <li>只抽取一部分请求来处理</li>
 </ul>
 </li>
-<li>限制执行时间<ul>
+<li><strong><u>限制执行时间</u></strong><ul>
 <li>在规定时间内得到近似解</li>
 </ul>
 </li>
-<li>限制待处理事件队列长度<ul>
+<li><strong><u>限制待处理事件队列长度</u></strong><ul>
 <li>直接放弃处理一部分事件</li>
 </ul>
 </li>
 </ul>
 <h6 id="资源的管理"><a href="#资源的管理" class="headerlink" title="资源的管理"></a>资源的管理</h6><ul>
-<li>利用并发机制<ul>
+<li><strong><u>利用并发机制</u></strong><ul>
 <li>多线程、多进程、多核、多机</li>
 </ul>
 </li>
-<li>增加可用资源<ul>
+<li><strong><u>增加可用资源</u></strong><ul>
 <li>计算资源、存储资源、带宽资源</li>
 </ul>
 </li>
 </ul>
 <h6 id="资源的仲裁"><a href="#资源的仲裁" class="headerlink" title="资源的仲裁"></a>资源的仲裁</h6><ul>
-<li><p>先来先服务</p>
+<li><p><strong><u>先来先服务</u></strong></p>
 </li>
-<li><p>固定优先级调度 </p>
+<li><p><strong><u>固定优先级调度</u></strong> </p>
+</li>
+<li><p>机场、车站的军人绿色通道</p>
+</li>
+<li><p><strong><u>动态优先级</u></strong></p>
 <ul>
-<li>机场、车站的军人绿色通道</li>
+<li>不饿死<ul>
+<li>最早deadline优先</li>
 </ul>
 </li>
-<li><p>动态优先级</p>
-<ul>
-<li>不饿死</li>
 </ul>
-</li>
-<li><p>最早deadline优先</p>
 </li>
 </ul>
 <h4 id="可测试性"><a href="#可测试性" class="headerlink" title="可测试性"></a>可测试性</h4><h5 id="概述-8"><a href="#概述-8" class="headerlink" title="概述"></a>概述</h5><p>软件测试就是为了<strong>发现错误</strong></p>
@@ -1093,17 +1093,19 @@
 <li>方向2：白盒测试</li>
 </ul>
 <p><img src="https://gitee.com/ugger01/blog-image/raw/master/img/20201227172330.png" alt="image-20201227172329556"></p>
-<h6 id="黑盒测试"><a href="#黑盒测试" class="headerlink" title="黑盒测试"></a>黑盒测试</h6><p>黑盒测试包括等值分析测试、错误推测法、边界值分析测试；<strong>逻辑</strong>覆盖测试属于<strong>白盒测试</strong></p>
+<h6 id="黑盒测试"><a href="#黑盒测试" class="headerlink" title="黑盒测试"></a>黑盒测试</h6><p>黑盒测试包括<u>等值分析测试、错误推测法、边界值分析测试</u>；<strong>逻辑</strong>覆盖测试属于<strong>白盒测试</strong></p>
 <ul>
-<li>记录/回放<ul>
+<li><strong><u>记录/回放</u></strong><ul>
 <li>自动化/半自动化测试</li>
 </ul>
 </li>
-<li>把接口和实现分离开<ul>
+<li><strong><u>把接口和实现分离开</u></strong><ul>
 <li>不同的排序算法，使用相同的接口</li>
 </ul>
 </li>
-<li>提供专用的测试路径</li>
+<li><strong><u>提供专用的测试路径</u></strong></li>
+</ul>
+<h6 id="白盒测试"><a href="#白盒测试" class="headerlink" title="白盒测试"></a><strong>白盒测试</strong></h6><ul>
 <li>内部监控<ul>
 <li>IDE提供的断点等调试工具</li>
 <li>WinDbg等工具</li>
@@ -1112,10 +1114,10 @@
 </ul>
 <h4 id="可扩展性"><a href="#可扩展性" class="headerlink" title="可扩展性"></a>可扩展性</h4><p>可扩展性描述系统、网络或进程以<strong>用户可以接受的方式</strong>处理工作量的增长或能更容易地扩张</p>
 <h5 id="常见的可扩展性问题"><a href="#常见的可扩展性问题" class="headerlink" title="常见的可扩展性问题"></a>常见的可扩展性问题</h5><ul>
-<li>请求负载</li>
-<li>连接数</li>
-<li>数据量</li>
-<li>部署节点数</li>
+<li><u>请求负载</u></li>
+<li><u>连接数</u></li>
+<li><u>数据量</u></li>
+<li><u>部署节点数</u></li>
 </ul>
 <h5 id="经常被忽视原因"><a href="#经常被忽视原因" class="headerlink" title="经常被忽视原因"></a>经常被忽视原因</h5><ul>
 <li>不是应用崩溃主要原因</li>
@@ -1123,7 +1125,7 @@
 <li>难以测试/验证</li>
 <li>主要依赖验证过的设计和技术</li>
 </ul>
-<h4 id="可靠性"><a href="#可靠性" class="headerlink" title="可靠性"></a>可靠性</h4><h4 id="可移植性"><a href="#可移植性" class="headerlink" title="可移植性"></a>可移植性</h4><h4 id="可维护性"><a href="#可维护性" class="headerlink" title="可维护性"></a>可维护性</h4><h3 id="通用质量属性场景vs-具体质量属性场景"><a href="#通用质量属性场景vs-具体质量属性场景" class="headerlink" title="通用质量属性场景vs. 具体质量属性场景"></a>通用质量属性场景vs. 具体质量属性场景</h3><ul>
+<h4 id="可靠性"><a href="#可靠性" class="headerlink" title="可靠性"></a>可靠性</h4><h4 id="可移植性"><a href="#可移植性" class="headerlink" title="可移植性"></a>可移植性</h4><h4 id="可维护性"><a href="#可维护性" class="headerlink" title="可维护性"></a>可维护性</h4><h3 id="通用质量属性场景vs-具体质量属性场景"><a href="#通用质量属性场景vs-具体质量属性场景" class="headerlink" title="通用质量属性场景vs. 具体质量属性场景"></a><u>通用质量属性场景vs. 具体质量属性场景</u></h3><ul>
 <li>通用质量属性场景具有系统独立性，适用于任何系统<ul>
 <li>质量属性表可充当<strong>核对清单</strong>，以确保<strong>所有可能性</strong>都被考虑到</li>
 </ul>
@@ -1137,17 +1139,17 @@
 </li>
 <li>从不同质量属性可能会生成相同或相似的场景，冗余质量属性可容易地被删除。重要的是没有重要的需求被遗漏。</li>
 </ul>
-<h3 id="质量属性场景"><a href="#质量属性场景" class="headerlink" title="质量属性场景"></a>质量属性场景</h3><h4 id="组成部分"><a href="#组成部分" class="headerlink" title="组成部分"></a>组成部分</h4><blockquote>
+<h3 id="质量属性场景"><a href="#质量属性场景" class="headerlink" title="质量属性场景"></a><u>质量属性场景</u></h3><h4 id="组成部分"><a href="#组成部分" class="headerlink" title="组成部分"></a>组成部分</h4><blockquote>
 <p>质量属性场景是一个质量属性<strong>特定的需求</strong>。</p>
 </blockquote>
 <p><strong>描述系统如何对刺激做出反应。由六部分组成：</strong></p>
 <ul>
-<li>刺激源：谁造成的刺激</li>
-<li>刺激：影响系统的事件</li>
-<li>制品：系统被影响的部分</li>
-<li>环境：刺激发生时系统所处的状态</li>
-<li>响应：刺激所产生的结果</li>
-<li>响应衡量指标：如何评估响应，响应发生时应当以某种方式进行度量以测试需求是否被满足。</li>
+<li><u><strong>刺激源：谁造成的刺激</strong></u></li>
+<li><u><strong>刺激：影响系统的事件</strong></u></li>
+<li><u><strong>制品：系统被影响的部分</strong></u></li>
+<li><u><strong>环境：刺激发生时系统所处的状态</strong></u></li>
+<li><u><strong>响应：刺激所产生的结果</strong></u></li>
+<li><u><strong>响应衡量指标：如何评估响应，响应发生时应当以某种方式进行度量以测试需求是否被满足。</strong></u></li>
 </ul>
 <p><img src="https://gitee.com/ugger01/blog-image/raw/master/img/20201227154749.png" alt="image-20201227154748879"></p>
 
