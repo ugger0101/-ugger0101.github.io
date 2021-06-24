@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="单词, codeforce">
+    <meta name="keywords" content="pp, codeforce">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>单词 | codeforce</title>
+    <title>pp | codeforce</title>
     <link rel="icon" type="image/png" href="https://cdn.jsdelivr.net/gh/ugger0101/ugger0101.github.io/favicon2.png">
 
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/ugger0101/ugger0101.github.io/libs/awesome/css/all.css">
@@ -316,7 +316,7 @@
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">单词</h1>
+                    <h1 class="description center-align post-title">pp</h1>
                 </div>
             </div>
         </div>
@@ -431,25 +431,12 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                    <div class="article-tag">
-                        
-                            <a href="/tags/%E8%8B%B1%E8%AF%AD/">
-                                <span class="chip bg-color">英语</span>
-                            </a>
-                        
-                    </div>
+                          <div class="article-tag">
+                            <span class="chip bg-color">无标签</span>
+                          </div>
                     
                 </div>
                 <div class="col s5 right-align">
-                    
-                    <div class="post-cate">
-                        <i class="fas fa-bookmark fa-fw icon-category"></i>
-                        
-                            <a href="/categories/%E8%8B%B1%E8%AF%AD/" class="post-category">
-                                英语
-                            </a>
-                        
-                    </div>
                     
                 </div>
             </div>
@@ -458,21 +445,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-01-11
+                    2021-06-24
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-01-11
+                    2021-06-24
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    0
+                    394
                 </div>
                 
 
@@ -484,10 +471,99 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p><img src="https://gitee.com/ugger01/blog-image/raw/master/img/20210111114636.jpg" alt="img"></p>
-<p><img src="https://gitee.com/ugger01/blog-image/raw/master/img/20210111114721.jpg" alt="img"></p>
-<p><img src="https://gitee.com/ugger01/blog-image/raw/master/img/20210111114740.jpg" alt="img"></p>
+                <h1 id="字母查找2-0（函数）"><a href="#字母查找2-0（函数）" class="headerlink" title="字母查找2.0（函数）"></a>字母查找2.0（函数）</h1><pre><code>def f(m,n):
+    for i in m:
+        if n.count(i)&gt;0:
+            n=n.replace(i,'',1)
+        else:
+            return 'NOT FOUND'
+    return 'FOUND'
 
+m=input()
+if m.isalpha():
+    n=input()
+    print(f(m,n))
+else:
+    print('ERROR')</code></pre><h1 id="哥德巴赫猜想"><a href="#哥德巴赫猜想" class="headerlink" title="哥德巴赫猜想"></a>哥德巴赫猜想</h1><pre><code>def isPrime(n):          #判断素数的函数
+    if n &lt; 2:
+        return False     #0和1不是素数
+    for i in range(2, n):
+        if n % i == 0:
+            return False
+    else:
+        return True
+N = int(input())        #接收用户输入并转成整数
+flag = False
+if N % 2 == 0:
+    for i in range(N):
+        for j in range(N):
+            if isPrime(i) and isPrime(j)  and i+j==N:
+                print("N = {} + {}".format(i,N-i))
+                flag = True
+                break
+        if flag:
+            break
+else:
+    print('Data error!')</code></pre><h1 id="爬楼"><a href="#爬楼" class="headerlink" title="爬楼"></a>爬楼</h1><pre><code>def upstrs(n):
+   if n==2:
+     return 1
+   elif n==3:
+     return 2
+   else:
+     return upstrs(n-1)+upstrs(n-2)
+
+n=eval(input())
+li=[0]*n
+print(upstrs(n))</code></pre><h1 id="青蛙"><a href="#青蛙" class="headerlink" title="青蛙"></a>青蛙</h1><pre><code>import math
+
+x, y, m, n, L = map(int, input().split())
+# x,y 为A,B起始坐标，A 一次m米，B一次n米，纬度线长L
+# x-y=(n-m)t+CL
+t = 1
+C = 1
+flag = 0
+c = math.gcd(L, (m - n))
+if (y - x) % c != 0:
+    print('Impossible')
+else:
+    while True:
+        while True:
+            if x + m * t + C * L == y + n * t:
+                print(t)
+                flag = 1
+                break
+            t = t + 1
+        if flag == 1:
+            break
+        C = C + 1</code></pre><h3 id="古诗竖排"><a href="#古诗竖排" class="headerlink" title="古诗竖排"></a>古诗竖排</h3><pre><code>txt = input().split(' ')
+ls = []
+for i in range(len(txt)):
+    ls.append([])
+l = max(len(txt[0]),len(txt[len(txt)-1]))
+i=0
+j=0
+for line in txt:
+    for c in range(l):
+        ls[i].append('┊')
+        if c&lt;len(line):
+            ls[i].append(line[c])
+        else:
+            ls[i].append('  ')
+        j = j + 1
+    i = i + 1
+
+for j in range(0,l*2-1,2):
+    for i in range(len(ls)-1,-1,-1):
+        print(ls[i][j]+ls[i][j+1],end='') 
+    print('┊')  #输出最后一列的分隔线</code></pre><h1 id="字典翻转"><a href="#字典翻转" class="headerlink" title="字典翻转"></a>字典翻转</h1><pre><code>s = input()
+try:
+    d = eval(s)
+    e = {}
+    for k in d:
+        e[d[k]] = k
+    print(e)
+except:
+    print("输入错误")</code></pre>
             </div>
             <hr/>
 
@@ -512,7 +588,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://www.codeforce.top/2021/01/11/dan-ci/">https://www.codeforce.top/2021/01/11/dan-ci/</a>
+                    <a href="https://www.codeforce.top/2021/06/24/pp/">https://www.codeforce.top/2021/06/24/pp/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -549,11 +625,7 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            
-                                <a href="/tags/%E8%8B%B1%E8%AF%AD/">
-                                    <span class="chip bg-color">英语</span>
-                                </a>
-                            
+                            <span class="chip bg-color">无标签</span>
                         </div>
                     
                 </div>
@@ -719,9 +791,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2021/06/24/pp/">
                     <div class="card-image">
@@ -744,9 +817,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-06-24
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-06-24
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -755,6 +828,7 @@
                         </span>
                     </div>
                 </div>
+
                 
             </div>
         </div>
@@ -765,21 +839,22 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/01/11/ji-suan-ji-ying-yu-fan-yi/">
+                <a href="/2021/01/11/dan-ci/">
                     <div class="card-image">
                         
                         
-                        <img src="https://cdn.jsdelivr.net/gh/ugger0101/ugger0101.github.io/medias/featureimages/11.jpg" class="responsive-img" alt="计算机英语-翻译">
+                        <img src="https://cdn.jsdelivr.net/gh/ugger0101/ugger0101.github.io/medias/featureimages/8.jpg" class="responsive-img" alt="单词">
                         
-                        <span class="card-title">计算机英语-翻译</span>
+                        <span class="card-title">单词</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Unit 1翻译Computers will become more advanced and they will also become easier to use. 
-计算机将变得更先进，也将变得更容易使用。
-Improved spee
+                            
+
+
+
                         
                     </div>
                     <div class="publish-info">

@@ -4,6 +4,19 @@
   
     
     <entry>
+      <title>pp</title>
+      <link href="2021/06/24/pp/"/>
+      <url>2021/06/24/pp/</url>
+      
+        <content type="html"><![CDATA[<h1 id="字母查找2-0（函数）"><a href="#字母查找2-0（函数）" class="headerlink" title="字母查找2.0（函数）"></a>字母查找2.0（函数）</h1><pre><code>def f(m,n):    for i in m:        if n.count(i)&gt;0:            n=n.replace(i,'',1)        else:            return 'NOT FOUND'    return 'FOUND'm=input()if m.isalpha():    n=input()    print(f(m,n))else:    print('ERROR')</code></pre><h1 id="哥德巴赫猜想"><a href="#哥德巴赫猜想" class="headerlink" title="哥德巴赫猜想"></a>哥德巴赫猜想</h1><pre><code>def isPrime(n):          #判断素数的函数    if n &lt; 2:        return False     #0和1不是素数    for i in range(2, n):        if n % i == 0:            return False    else:        return TrueN = int(input())        #接收用户输入并转成整数flag = Falseif N % 2 == 0:    for i in range(N):        for j in range(N):            if isPrime(i) and isPrime(j)  and i+j==N:                print("N = {} + {}".format(i,N-i))                flag = True                break        if flag:            breakelse:    print('Data error!')</code></pre><h1 id="爬楼"><a href="#爬楼" class="headerlink" title="爬楼"></a>爬楼</h1><pre><code>def upstrs(n):   if n==2:     return 1   elif n==3:     return 2   else:     return upstrs(n-1)+upstrs(n-2)n=eval(input())li=[0]*nprint(upstrs(n))</code></pre><h1 id="青蛙"><a href="#青蛙" class="headerlink" title="青蛙"></a>青蛙</h1><pre><code>import mathx, y, m, n, L = map(int, input().split())# x,y 为A,B起始坐标，A 一次m米，B一次n米，纬度线长L# x-y=(n-m)t+CLt = 1C = 1flag = 0c = math.gcd(L, (m - n))if (y - x) % c != 0:    print('Impossible')else:    while True:        while True:            if x + m * t + C * L == y + n * t:                print(t)                flag = 1                break            t = t + 1        if flag == 1:            break        C = C + 1</code></pre><h3 id="古诗竖排"><a href="#古诗竖排" class="headerlink" title="古诗竖排"></a>古诗竖排</h3><pre><code>txt = input().split(' ')ls = []for i in range(len(txt)):    ls.append([])l = max(len(txt[0]),len(txt[len(txt)-1]))i=0j=0for line in txt:    for c in range(l):        ls[i].append('┊')        if c&lt;len(line):            ls[i].append(line[c])        else:            ls[i].append('  ')        j = j + 1    i = i + 1for j in range(0,l*2-1,2):    for i in range(len(ls)-1,-1,-1):        print(ls[i][j]+ls[i][j+1],end='')     print('┊')  #输出最后一列的分隔线</code></pre><h1 id="字典翻转"><a href="#字典翻转" class="headerlink" title="字典翻转"></a>字典翻转</h1><pre><code>s = input()try:    d = eval(s)    e = {}    for k in d:        e[d[k]] = k    print(e)except:    print("输入错误")</code></pre>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>单词</title>
       <link href="2021/01/11/dan-ci/"/>
       <url>2021/01/11/dan-ci/</url>
